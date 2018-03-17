@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180317194134) do
     t.string "name", limit: 150
     t.string "verb", limit: 150
     t.string "noun", limit: 150
+    t.string "conditions"
   end
 
   create_table "permissions_user_groups", force: :cascade do |t|

@@ -6,6 +6,7 @@ class CreatePermissions < ActiveRecord::Migration[5.1]
       t.string :name, limit: "150"
       t.string :verb, limit: "150"
       t.string :noun, limit: "150"
+      t.string :conditions
     end
 
     create_table :permissions_user_groups do |t|

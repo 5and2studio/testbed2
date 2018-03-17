@@ -30,16 +30,19 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 
     user ||= User.new
-    
-    if user.is_admin? then
-      can :manage, :all
-    else
-      user.permissions.each do |permission|
-        begin
-          can permission.verb.to_sym, permission.noun.constantize
-        rescue
-          can permission.verb.to_sym, permission.noun.to_sym
-        end
+
+    can(:manage, :all) and return if user.is_admin?
+
+    user.permissions.each do |permission|
+      conditions = {}
+      JSON.parse(permission.conditions) unless permission.conditions.blank?
+
+      # if the noun represents a Class, it will be able to constantize
+      # otherwise, we have to turn it to a symbol
+      begin
+        can permission.verb.to_sym, permission.noun.constantize, conditions
+      rescue
+        can permission.verb.to_sym, permission.noun.to_sym, conditions
       end
     end
   end
