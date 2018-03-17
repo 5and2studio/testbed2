@@ -11,5 +11,8 @@ import 'application';
 require('bootstrap/dist/css/bootstrap.min.css');
 require('font-awesome/css/font-awesome.min.css');
 require('ionicons/dist/css/ionicons.min.css');
-require('admin-lte/dist/css/AdminLTE.min.css')
-require('admin-lte/dist/css/skins/skin-blue.min.css')
+require('jvectormap/jquery-jvectormap.css');
+require('admin-lte/dist/css/AdminLTE.min.css');
+require('admin-lte/dist/css/skins/skin-blue.min.css');
+window.jQuery = window.$ = require('jquery/dist/jquery.min.js');
+

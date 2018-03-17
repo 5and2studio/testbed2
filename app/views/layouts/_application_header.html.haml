@@ -34,7 +34,7 @@
                   %a{:href => "#"}
                     .pull-left
                       / User Image
-                      = image_tag "user2-160x160.jpg", alt: "User Image", class: "img-circle"
+                      %img.img-circle{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
                     / Message title and timestamp
                     %h4
                       Support Team
@@ -98,13 +98,13 @@
           / Menu Toggle Button
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             / The user image in the navbar
-            = image_tag "user2-160x160.jpg", alt: "User Image", class: "user-image"
+            %img.user-image{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
             / hidden-xs hides the username on small devices so only the image appears.
             %span.hidden-xs Alexander Pierce
           %ul.dropdown-menu
             / The user image in the menu
             %li.user-header
-              = image_tag "user2-160x160.jpg", alt: "User Image", class: "img-circle"
+              %img.img-circle{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
               %p
                 Alexander Pierce - Web Developer
                 %small Member since Nov. 2012

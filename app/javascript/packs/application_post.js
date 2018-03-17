@@ -7,6 +7,13 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-window.jQuery = window.$ = require('jquery/dist/jquery.min.js');
 require('bootstrap/dist/js/bootstrap.min.js');
+
+require('fastclick/lib/fastclick.js');
+
 require('admin-lte/dist/js/adminlte.min.js');
+
+require('jquery-sparkline/jquery.sparkline.min.js');
+require('jvectormap/jquery-jvectormap.min.js');
+
+
