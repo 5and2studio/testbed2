@@ -1,6 +1,7 @@
 class TestController < ProtectedController
   def test
-    Rails.logger.info "checking edit user: #{can? :edit, User}"
+    Rails.logger.info "checking edit user: #{can? :edit, current_user }"
+    Rails.logger.info "checking edit ability: #{can? :edit, Ability }"
     Rails.logger.info "checking read user: #{can? :read, User}"
   end
 end
