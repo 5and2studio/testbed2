@@ -7,9 +7,6 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-import 'application';
-require('bootstrap/dist/css/bootstrap.min.css');
-require('font-awesome/css/font-awesome.min.css');
-require('ionicons/dist/css/ionicons.min.css');
-require('admin-lte/dist/css/AdminLTE.min.css')
-require('admin-lte/dist/css/skins/skin-blue.min.css')
+window.jQuery = window.$ = require('jquery/dist/jquery.min.js');
+require('bootstrap/dist/js/bootstrap.min.js');
+require('admin-lte/dist/js/adminlte.min.js');
