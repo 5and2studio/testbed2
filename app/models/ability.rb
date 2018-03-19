@@ -35,7 +35,7 @@ class Ability
 
     user.permissions.each do |permission|
       conditions = {}
-      JSON.parse(permission.conditions) unless permission.conditions.blank?
+      conditions = JSON.parse(permission.conditions) unless permission.conditions.blank?
 
       # if the noun represents a Class, it will be able to constantize
       # otherwise, we have to turn it to a symbol
