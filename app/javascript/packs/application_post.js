@@ -8,12 +8,15 @@
 // layout file, like app/views/layouts/application.html.erb
 
 require('bootstrap/dist/js/bootstrap.min.js');
-
 require('fastclick/lib/fastclick.js');
-
 require('admin-lte/dist/js/adminlte.min.js');
-
 require('jquery-sparkline/jquery.sparkline.min.js');
 require('jvectormap/jquery-jvectormap.min.js');
 
-
+$(function () {
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' // optional
+  });
+});
