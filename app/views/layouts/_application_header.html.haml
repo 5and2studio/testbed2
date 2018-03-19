@@ -34,7 +34,7 @@
                   %a{:href => "#"}
                     .pull-left
                       / User Image
-                      %img.img-circle{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
+                      %img.img-circle{ src: current_user.avatar_url, alt: "User Image" }
                     / Message title and timestamp
                     %h4
                       Support Team
@@ -98,16 +98,16 @@
           / Menu Toggle Button
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             / The user image in the navbar
-            %img.user-image{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
+            %img.user-image{ src: current_user.avatar_url, alt: "User Image" }
             / hidden-xs hides the username on small devices so only the image appears.
-            %span.hidden-xs Alexander Pierce
+            %span.hidden-xs= current_user.full_name
           %ul.dropdown-menu
             / The user image in the menu
             %li.user-header
-              %img.img-circle{ src: "/assets/user2-160x160.jpg", alt: "User Image" }
+              %img.img-circle{ src: current_user.avatar_url, alt: "User Image" }
               %p
-                Alexander Pierce - Web Developer
-                %small Member since Nov. 2012
+                = "#{current_user.full_name} - #{current_user.email}"
+                %small= "Member since #{current_user.created_at.to_s(:My)}"
             / Menu Body
             %li.user-body
               .row
