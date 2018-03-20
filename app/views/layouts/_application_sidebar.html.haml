@@ -1,29 +1,21 @@
-/ Left side column. contains the logo and sidebar
 %aside.main-sidebar
-  / sidebar: style can be found in sidebar.less
   %section.sidebar
-    / Sidebar user panel (optional)
     .user-panel
       .pull-left.image
         %img.img-circle{ src: current_user.avatar_url, alt: "User Image" }
       .pull-left.info
         %p= current_user.full_name
-        / Status
         %a{:href => "#"}
           %i.fa.fa-circle.text-success
           Online
-    / search form (Optional)
-    %form.sidebar-form{:action => "#", :method => "get"}
+\    %form.sidebar-form{:action => "#", :method => "get"}
       .input-group
         %input.form-control{:name => "q", :placeholder => "Search...", :type => "text"}/
         %span.input-group-btn
           %button#search-btn.btn.btn-flat{:name => "search", :type => "submit"}
             %i.fa.fa-search
-    / /.search form
-    / Sidebar Menu
     %ul.sidebar-menu{"data-widget" => "tree"}
       %li.header HEADER
-      / Optionally, you can add icons to the links
       %li.active
         %a{:href => "#"}
           %i.fa.fa-link
@@ -43,5 +35,3 @@
             %a{:href => "#"} Link in level 2
           %li
             %a{:href => "#"} Link in level 2
-    / /.sidebar-menu
-  / /.sidebar
