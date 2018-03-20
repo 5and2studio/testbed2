@@ -5,6 +5,7 @@
     "@rails/webpacker": "^3.3.1",
     "admin-lte": "^2.4.2",
     "html5shiv": "^3.7.3",
+    "icheck": "^1.0.2",
     "rails-ujs": "^5.1.5",
     "respond": "^0.9.0",
     "turbolinks": "^5.1.1",

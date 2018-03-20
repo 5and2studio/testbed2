@@ -16,19 +16,19 @@ require('admin-lte/dist/css/skins/skin-blue.min.css');
 
 require('rails-ujs');
 require('turbolinks');
-require('respond/main.js');
-require('html5shiv/src/html5shiv-printshiv.js');
-require('html5shiv/src/html5shiv.js');
-window.jQuery = window.$ = require('jquery/dist/jquery.min.js');
-window.Chart = require('chart.js/Chart.js');
-require('bootstrap/dist/js/bootstrap.min.js');
-require('fastclick/lib/fastclick.js');
-require('admin-lte/dist/js/adminlte.min.js');
-require('jquery-sparkline/jquery.sparkline.js');
-require('jvectormap/jquery-jvectormap.min.js');
+require('respond');
+require('html5shiv');
+window.jQuery = window.$ = require('jquery');
+window.Chart = require('chart.js');
+require('bootstrap');
+require('fastclick');
+require('admin-lte');
+require('jquery-sparkline');
+require('jvectormap');
+require('icheck');
 
 import 'application';
-/*
+
 $(function () {
   $('input').iCheck({
     checkboxClass: 'icheckbox_square-blue',
@@ -36,4 +36,3 @@ $(function () {
     increaseArea: '20%' // optional
   });
 });
-*/
