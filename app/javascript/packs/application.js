@@ -21,15 +21,10 @@ require('respond');
 require('html5shiv');
 
 import 'expose-loader?$!expose-loader?jQuery!jquery'
+import 'jquery-sparkline'
+import 'expose-loader?Chart!chart.js'
 import 'bootstrap'
-
 import 'admin-lte'
-
-
-
-
-//import Chart from 'chart.js'
-
 
 import 'application';
 
@@ -42,30 +37,5 @@ $(function () {
   });
 });
 */
-
-
-
-
-
-
-
-
-
-
-
-//import 'jquery-slimscroll'
-//import 'jquery-ui/ui/widgets/sortable.js'
-//import 'jquery-ui/ui/widgets/datepicker.js'
-//import 'jquery-ui/themes/base/datepicker.css'
-//import $ from 'jquery';
-//window.jQuery = window.$ = $;
-//window.jQuery = window.$ = require('jquery');
-//import Chart from 'chart.js';
-//window.Chart = Chart;
-//window.Chart = require('chart.js');
-//require('bootstrap');
 //require('fastclick');
-//require('admin-lte');
-//require('jquery-sparkline');
-//require('jvectormap');
 //require('icheck');
