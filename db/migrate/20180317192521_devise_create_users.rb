@@ -5,6 +5,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
     create_table :users do |t|
       t.timestamps null: false
       t.datetime :deleted_at
+      t.references :created_by, references: :user, null: true
+      t.references :updated_by, references: :user, null: true
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""

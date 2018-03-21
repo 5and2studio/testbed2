@@ -31,6 +31,9 @@ class Ability
 
     user ||= User.new
 
+    # store user for reference elsewhere in this thread
+    User.current = user
+
     can(:manage, :all) and return if user.is_admin?
 
     user.permissions.each do |permission|

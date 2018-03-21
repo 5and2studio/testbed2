@@ -16,10 +16,14 @@ ActiveRecord::Schema.define(version: 20180317194134) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
+    t.integer "created_by_id"
+    t.integer "updated_by_id"
     t.string "name", limit: 150
     t.string "verb", limit: 150
     t.string "noun", limit: 150
     t.string "conditions"
+    t.index ["created_by_id"], name: "index_permissions_on_created_by_id"
+    t.index ["updated_by_id"], name: "index_permissions_on_updated_by_id"
   end
 
   create_table "permissions_user_groups", force: :cascade do |t|
@@ -33,7 +37,11 @@ ActiveRecord::Schema.define(version: 20180317194134) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
+    t.integer "created_by_id"
+    t.integer "updated_by_id"
     t.string "name", limit: 150
+    t.index ["created_by_id"], name: "index_user_groups_on_created_by_id"
+    t.index ["updated_by_id"], name: "index_user_groups_on_updated_by_id"
   end
 
   create_table "user_groups_users", force: :cascade do |t|
@@ -47,6 +55,8 @@ ActiveRecord::Schema.define(version: 20180317194134) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
+    t.integer "created_by_id"
+    t.integer "updated_by_id"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "first_name"
@@ -68,9 +78,11 @@ ActiveRecord::Schema.define(version: 20180317194134) do
     t.string "unlock_token"
     t.datetime "locked_at"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["created_by_id"], name: "index_users_on_created_by_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+    t.index ["updated_by_id"], name: "index_users_on_updated_by_id"
   end
 
 end

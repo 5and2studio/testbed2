@@ -3,6 +3,8 @@ class CreatePermissions < ActiveRecord::Migration[5.1]
     create_table :permissions do |t|
       t.timestamps null: false
       t.timestamp :deleted_at
+      t.references :created_by, references: :user, null: true
+      t.references :updated_by, references: :user, null: true
       t.string :name, limit: "150"
       t.string :verb, limit: "150"
       t.string :noun, limit: "150"
