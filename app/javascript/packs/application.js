@@ -7,28 +7,33 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-require('bootstrap/dist/css/bootstrap.min.css');
-require('font-awesome/css/font-awesome.min.css');
-require('ionicons/dist/css/ionicons.min.css');
-require('jvectormap/jquery-jvectormap.css');
-require('admin-lte/dist/css/AdminLTE.min.css');
-require('admin-lte/dist/css/skins/skin-blue.min.css');
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'ionicons/dist/css/ionicons.min.css';
+import 'jvectormap/jquery-jvectormap.css';
+import 'admin-lte/dist/css/AdminLTE.min.css';
+import 'admin-lte/dist/css/skins/skin-blue.min.css';
 
 require('rails-ujs');
 require('turbolinks');
+
 require('respond');
 require('html5shiv');
-window.jQuery = window.$ = require('jquery');
-window.Chart = require('chart.js');
-require('bootstrap');
-require('fastclick');
-require('admin-lte');
-require('jquery-sparkline');
-require('jvectormap');
-require('icheck');
+
+import 'expose-loader?$!expose-loader?jQuery!jquery'
+import 'bootstrap'
+
+import 'admin-lte'
+
+
+
+
+//import Chart from 'chart.js'
+
 
 import 'application';
 
+/*
 $(function () {
   $('input').iCheck({
     checkboxClass: 'icheckbox_square-blue',
@@ -36,3 +41,31 @@ $(function () {
     increaseArea: '20%' // optional
   });
 });
+*/
+
+
+
+
+
+
+
+
+
+
+
+//import 'jquery-slimscroll'
+//import 'jquery-ui/ui/widgets/sortable.js'
+//import 'jquery-ui/ui/widgets/datepicker.js'
+//import 'jquery-ui/themes/base/datepicker.css'
+//import $ from 'jquery';
+//window.jQuery = window.$ = $;
+//window.jQuery = window.$ = require('jquery');
+//import Chart from 'chart.js';
+//window.Chart = Chart;
+//window.Chart = require('chart.js');
+//require('bootstrap');
+//require('fastclick');
+//require('admin-lte');
+//require('jquery-sparkline');
+//require('jvectormap');
+//require('icheck');
