@@ -6,5 +6,11 @@ Rails.application.routes.draw do
   controller :test do
     get 'test'
     get 'guarded'
+    get 'quotes'
+    get 'users'
+  end
+
+  namespace :api do
+    resources :users
   end
 end

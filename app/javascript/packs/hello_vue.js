@@ -6,16 +6,19 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue'
-import App from '../app.vue'
+import axios from 'axios'
+import ExampleComponent from '../vue/components/ExampleComponent'
+import QuoteWizard from '../vue/components/QuoteWizard'
+import Users from '../vue/components/Users'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({
-    el,
-    render: h => h(App)
-  })
+  Vue.component('examplecomponent', ExampleComponent);
+  Vue.component('quotewizard', QuoteWizard);
+  Vue.component('users', Users);
 
-  console.log(app);
+  const app = new Vue({
+    el: '#app'
+  });
 })
 
 
